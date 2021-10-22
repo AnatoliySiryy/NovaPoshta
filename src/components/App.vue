@@ -23,12 +23,11 @@
            cities:[],
            departments:[],
            dep:"Запоріжжя",
-           
         }},
         mounted: function(){
             
                 axios.post("https://api.novaposhta.ua/v2.0/json/Address/getCities", {
-                        apiKey: "8569bc0d64cca934aa4d2e95b5a659a3",
+                        apiKey: "0555c556f433266e962e4ded47a8b3e9",
                         modelName: "Address",
                         calledMethod: "getCities",
                         methodProperties: {}
@@ -36,17 +35,13 @@
                 .then((response)=>{
                     console.log(response.data);
                     this.cities = response.data.data;
-                })
-
-                
-                
-            
+                })     
         },
         methods:{
             checkDeps: function() {
                 
                  axios.post("https://api.novaposhta.ua/v2.0/json/Address/getWarehouses", {
-                        apiKey: "8569bc0d64cca934aa4d2e95b5a659a3",
+                        apiKey: "0555c556f433266e962e4ded47a8b3e9",
                         modelName: "Address",
                         calledMethod: "getWarehouses",
                         methodProperties: {
